@@ -1,0 +1,27 @@
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <h2>Need help? Want to work with us?</h2>
+    <h1>Please Contact Us</h1>
+    <%= form_with url: contact_path, method: :post, local: true do |f| %>
+      <div class="mb-3">
+        <%= f.label :name, 'Name' %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+      <div class="mb-3">
+        <%= f.label :email, 'Email' %>
+        <%= f.email_field :email, class: 'form-control' %>
+      </div>
+      <div class="mb-3">
+        <%= f.label :message, 'Message' %>
+        <%= f.text_area :message, class: 'form-control' %>
+      </div>
+      <%= f.submit 'Submit', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
