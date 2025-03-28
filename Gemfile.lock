@@ -369,7 +369,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  bootstrap
+  bootstrap (~> 5.3.3)
   brakeman
   capybara
   cssbundling-rails
